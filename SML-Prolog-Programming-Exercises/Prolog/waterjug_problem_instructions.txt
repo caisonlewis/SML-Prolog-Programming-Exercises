@@ -1,0 +1,13 @@
+Consider the following problem:
+
+1 . You have a four-gallon jug and a three-gallon jug, neither of which has any markings. Understand what this means. The only reliable observations are: a jug is empty in which case it has zero gallons in it; or, a jug is full, in which case it has its "capacity" gallons in it, and any other conclusions you can logically draw from these states. For example, say you fill the 4-gallon jug, and then fill the 3-gallon jug from it, you can logically conclude that there is 1 gallon left in the 4-gallon jug. Since the jugs have no markings, no other amounts can be transferred from the full 4-gallon jug to the 3-gallon jug. In this example, you cannot transfer 1, or 1.5, or 2, or 2.25, or 3.142 gallons of water from the 4-gallon jug to the 3-gallon jug.
+
+2. There is a faucet from which you can top off the jugs as many times as you wish. Following this, a jug has its "capacity" gallons in it.
+
+3. You can empty one jug into the other, or onto the ground, in which case the jug is known to have zero gallons in it.
+
+4. You can transfer water between the two jugs. Again, since the jugs have no markings, the only transfers that are logical are those that leave one jug full or the other empty.
+
+Write a Prolog program that finds a sequence of moves (in the form of a list of instructions) that, starting from two empty jugs, ends with exactly two gallons of water in the 4-gallon jug and no water in the 3-gallon jug.
+
+To test your implementation, evaluate the following: length(X, Y), Y < 10, solution([0,0], X). This query must produce in X, the steps required in the form ['Top off 4-gallon jug from faucet', 'Empty 4-gallon jug onto the ground', and so on]
